@@ -72,7 +72,11 @@ file : realclean everything
 
 all	: file buildimg
 
-commit: 
+commit:	
+	git add --all
+	git commit -m 'Everything is for graduation project.'
+	git remote add origin git@github.com:augustusalex:FishOS.git
+	git push -u origin master
 
 boot/boot.bin:	boot/boot.asm boot/include/FAT32Head.inc
 			$(ASM) $(ASMBFLAGS) -o $@ $<
