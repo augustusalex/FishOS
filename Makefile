@@ -78,7 +78,7 @@ commit:
 	git add --all
 	git commit -m 'Everything is for graduation project.'
 	git remote add origin git@github.com:augustusalex:FishOS.git
-	git push -u origin master mxk19930509
+	git push -u origin master@mxk19930509
 
 boot/boot.bin:	boot/boot.asm boot/include/FAT32Head.inc
 			$(ASM) $(ASMBFLAGS) -o $@ $<
