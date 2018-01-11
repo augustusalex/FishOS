@@ -1,5 +1,7 @@
 #Makefile for boot
 
+
+
 #Program, flags, etc.
 ASM			= nasm
 DASM		= ndisasm
