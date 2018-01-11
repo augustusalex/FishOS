@@ -17,6 +17,9 @@ FISHOSBOOT	= boot/boot.bin	boot/loader.bin
 OBJS		= kernel/kernel.o kernel/start.o kernel/main.o kernel/i8259.o kernel/protect.o kernel/global.o lib/klibc.o lib/klib.o lib/string.o 
 FISHOSKERNEL= kernel/kernel.bin
 
+Directories	= boot include kernel lib
+Files		= bochsrc.bxrc fishos.img format format.c Makefile MemeAndPage.inc README
+
 #TEST		= kernel/kernel.bin
 
 # All Phony Targets
@@ -68,6 +71,8 @@ buildimg:
 file : realclean everything
 
 all	: file buildimg
+
+commit: 
 
 boot/boot.bin:	boot/boot.asm boot/include/FAT32Head.inc
 			$(ASM) $(ASMBFLAGS) -o $@ $<
